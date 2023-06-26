@@ -1,12 +1,26 @@
 {
   "name": "creacion-libreria-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Librería UI de componentes creada para curso de Platzi",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Juliocquintero/curso-libreria-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Juliocquintero/curso-libreria-ui/issues"
+  },
+  "homepage": "https://github.com/Juliocquintero/curso-libreria-ui/#readme",
+  "keywords": [
+    "ui-library",
+    "react-component-library"
+  ],
+  "author": "Julio Quintero",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/css": "^11.11.2"
+  }
 }
