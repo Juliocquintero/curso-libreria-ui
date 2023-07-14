@@ -1,10 +1,15 @@
 {
-  "name": "creacion-libreria-ui",
+  "name": "creacion-libreria-ui-jq",
   "version": "1.0.0",
   "description": "Librería UI de componentes creada para curso de Platzi",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "jest --config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js",
+    "build": "set NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
+    "release": "npm run build && npm publish",
+    "release:patch": "npm version patch && npm run release",
+    "release:minor": "npm version minor && npm run publish",
+    "release:major": "npm version major && npm run publish"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,7 @@
   ],
   "author": "Julio Quintero",
   "license": "ISC",
+  "publishConfig": {"access": "public"},
   "dependencies": {
     "@emotion/css": "^11.11.2"
   },
